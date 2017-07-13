@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>WebIOPi | Light Control</title>
+	
+	<script type="text/javascript" src="/webiopi.js"></script>
+	
+	<script type="text/javascript" src="script.js"></script>
+	
+	<link rel = "stylesheet"
+ 	type = "text/css"
+	href = "style.css" />
+</head>
+
+	<body onload="checkIfOpen()">
+		<div id="leftDiv" align="left"> 
+		
+			<p id="time"> </p>	
+			
+		</div>
+		
+		<div id="CenterDiv" align="center">
+
+			<button id="gpio4" onclick="toggle()">Toggle </button>
+	
+			<p id="status">Open</p>
+		</div>
+	</body>
+</html>
