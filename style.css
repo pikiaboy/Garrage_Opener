@@ -1,17 +1,51 @@
-button {
+#leftDiv{
+	float: left;
+}
+
+#centerDiv{
+	
+}
+
+#rightDiv{
+	float: right;
+}
+
+#mainDiv{
+	
+}
+
+.sumbitButton{
+	width: 100px;
+}
+
+.toggleButton {
 	display: block;
 	margin: 5px 5px 5px 5px;
 	width: 50%;
-	height: 100%;
-	font-size: 24pt;
+	height 50%;
+	font-size: 36pt;
 	font-weight: bold;
-	color: white;
+	color: Black;
 }
 
 #gpio4.LOW {
+	display: block;
+	margin: 5px 5px 5px 5px;
+	width: 50%;
+	height: 300px;
+	font-size: 36pt;
+	font-weight: bold; 
+	color: Black;
 	background-color: Grey;
 }
 
 #gpio4.HIGH {
+	display: block;
+	margin: 5px 5px 5px 5px;
+	width: 50%;
+	height: 300px;
+	font-size: 36pt;
+	font-weight: bold;
+	color: Black;
 	background-color: Orange;
 }

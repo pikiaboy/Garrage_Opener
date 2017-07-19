@@ -1,3 +1,5 @@
+var confrimAutoClose = true; 
+
 webiopi().ready(init);
 
 function init(){
@@ -11,16 +13,24 @@ function init(){
 	//Check every 500ms if garrage is open
 	setInterval(function() { isOpen() }, 500);
 	
-	//Auto-Close door
-	setInterval(function() { autoClose() }, 1000);
+	//Auto-Close door                       30 seconds
+	setInterval(function() { autoClose() }, 30000);
 }
 
 function autoClose(){
-	var d = new Date();	
 	
-	if(d.getHours() > 22 || d.getHours() < 5 && isOpen())
+	var d = new Date();	
+	var choice = $('input[name="autoCloseChoice"]:checked').val();
+	
+	if(choice == "on")
+		confrimAutoClose = true;
+	else
+		confrimAutoClose = false;
+
+	if( confrimAutoClose && isOpen() && (d.getHours() > 22 || d.getHours() < 5) )
 	{
 		toggle();
+		//setInterval(function() { }, 10000);
 	}
 			
 
@@ -31,13 +41,13 @@ function autoClose(){
 function isOpen(){
 	if(webiopi().digitalRead(17) == 0)
 		{
-			document.getElementById("status").innerText = "Closed";
-			return false;
+			document.getElementById("status").innerText = "Open";
+			return true;
 		}
 	else
 		{
-			document.getElementById("status").innerText= "Open";
-			return true;
+			document.getElementById("status").innerText= "Close";
+			return false;
 		}
 }
 

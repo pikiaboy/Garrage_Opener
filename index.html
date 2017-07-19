@@ -14,22 +14,29 @@
 </head>
 
 	<body>
+	<div id="mainDiv">
 		<div id="leftDiv" align="left"> 
 		
 			<p id="time"> </p><br>
 
 			<p>Auto Close at 11 PM PST</p>
+			
 			<form action="">	
 			<input type="radio" name="autoCloseChoice" value="on">On</input><br>
 			<input type="radio" name="autoCloseChoice" value="off">Off</input><br>
 			</form>
+
+			<button class="sumbitButton">Submit</button>
 		</div>
 		
-		<div id="CenterDiv" align="center">
+		<div id="centerDiv" align="center">
 
-			<button id="gpio4" onclick="toggle()">Toggle </button>
+			<button class="toggleButton" id="gpio4" onclick="toggle()">Toggle </button>
 	
 			<p id="status">Open</p>
 		</div>
+
+		<div id="rightDiv"> </div>
+	</div>
 	</body>
 </html>
